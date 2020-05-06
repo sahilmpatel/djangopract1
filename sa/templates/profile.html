@@ -1,0 +1,113 @@
+{%  extends 'common/head-foot.html' %}
+{% load static %}
+
+{% block 'content' %}
+	<section class="job-bg user-page">
+		<div class="container  text-center">
+			<div class="user-account-content">
+				<div class="user-account job-user-account">
+					<h2 >Profile</h2>
+						<ul class="nav nav-tabs text-center" role="tablist">
+
+
+						</ul>
+
+						<div class="tab-content">
+
+							<div role="" class="" id="post-job">
+								<form method="POST" enctype="multipart/form-data">
+									{% csrf_token %}
+<!--									<div class="form-group">-->
+<!--										<input type="text" class="form-control" placeholder="Employer Name" >-->
+<!--									</div>-->
+<!--									<div class="form-group">-->
+<!--										<input type="email" class="form-control" placeholder="Email Id">-->
+<!--									</div>-->
+<!--									<div class="form-group">-->
+<!--										<input type="password" class="form-control" placeholder="Password">-->
+<!--									</div>-->
+									<div class="form-group">
+
+<!--										<p>{% for f in form %}-->
+<!--										<p>{{f.name}}{{ f }}</p>-->
+
+<!--											{% endfor %}</p>-->
+
+
+                                            <div class="form-group row">
+											<label class="col-sm-2 col-form-label">Name</label>
+											<div class="col-sm-4">
+											{{ form.name }}
+											</div>
+											</div>
+
+										    <div class="form-group row">
+										    <label class="col-sm-2 col-form-label">Email</label>
+											<div class="col-sm-4">
+											{{ form.email }}
+											</div>
+											</div>
+
+										     <div class="form-group row">
+										     <label class="col-sm-2 col-form-label">Phoneno</label>
+											<div class="col-sm-4">
+											{{ form.phone_no }}
+											</div>
+											 </div>
+
+										     <div class="form-group row">
+										     <label class="col-sm-2 col-form-label">Gender</label>
+											<div class="col-sm-4">
+											{{ form.gender }}
+											</div>
+											 </div>
+
+										     <div class="form-group row">
+										     <label class="col-sm-2 col-form-label">Address</label>
+											<div class="col-sm-4">
+											{{ form.address }}
+											</div>
+											 </div>
+
+										   <div class="form-group row">
+										    <label class="col-sm-2 col-form-label">Password</label>
+											<div class="col-sm-4">
+											{{ form.password }}
+											</div>
+										   </div>
+
+										   <div class="form-group row">
+										    <label class="col-sm-2 col-form-label">Confirm password</label>
+											<div class="col-sm-4">
+											{{ form.conf_password }}
+											</div>
+										   </div>
+
+										   <div class="form-group row">
+										    <label class="col-sm-2 col-form-label">Birthdate</label>
+											<div class="col-sm-4">
+											{{ form.birthdate }}
+											</div>
+										   </div>
+
+
+
+
+
+										 <button type="submit" class="btn">Submit</button>
+									</div>
+
+
+
+
+
+
+								</form>
+							</div>
+						</div>				
+				</div>
+			</div><!-- user-login -->	
+		</div><!-- container -->
+	</section><!-- signup-page -->
+
+{% endblock %}
